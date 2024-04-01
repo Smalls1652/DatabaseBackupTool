@@ -215,6 +215,49 @@
         "clear": true
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Start MySQL database container",
+      "detail": "Start a local MySQL database container.",
+      "icon": {
+        "id": "database",
+        "color": "terminal.ansiCyan"
+      },
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "run",
+        "--name",
+        "dbbt-test-mysql-db",
+        "--rm",
+        "--tty",
+        "--interactive",
+        "--publish",
+        "3306:3306",
+        "--publish",
+        "33060:33060",
+        "--env",
+        "MYSQL_USER=testdbuser",
+        "--env",
+        "MYSQL_ROOT_PASSWORD=P@$$w0rd1!",
+        "--env",
+        "MYSQL_PASSWORD=P@$$w0rd1!",
+        "--env",
+        "MYSQL_DATABASE=testdb",
+        "--volume",
+        "dbbt-test-mysqldb-vol:/var/lib/mysql",
+        "mysql:8"
+      ],
+      "isBackground": false,
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "problemMatcher": []
     }
   ],
   "inputs": [
