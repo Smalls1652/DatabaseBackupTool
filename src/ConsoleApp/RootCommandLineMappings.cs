@@ -10,6 +10,7 @@ public static class RootCommandLineMappings
     /// </summary>
     public static Dictionary<string, string> SwitchMappings = new()
     {
+        ["--database-type"] = "DATABASE_TYPE",
         ["--host"] = "DATABASE_HOST",
         ["--port"] = "DATABASE_PORT",
         ["--username"] = "DATABASE_USERNAME",
