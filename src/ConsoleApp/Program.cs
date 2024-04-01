@@ -19,6 +19,7 @@ builder.Services
     .AddSlimHostLifetime();
 
 builder.Configuration
+    .SetBasePath(AppContext.BaseDirectory)
     .AddJsonFile(
         path: "appsettings.json",
         optional: true,
