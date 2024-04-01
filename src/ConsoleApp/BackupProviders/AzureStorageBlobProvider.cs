@@ -1,8 +1,8 @@
 using Azure.Identity;
 using Azure.Storage.Blobs;
-using PostgresBackupTool.ConsoleApp.Models;
+using DatabaseBackupTool.ConsoleApp.Models;
 
-namespace PostgresBackupTool.ConsoleApp.BackupProviders;
+namespace DatabaseBackupTool.ConsoleApp.BackupProviders;
 
 /// <summary>
 /// Backup provider for Azure Blob Storage.

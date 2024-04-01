@@ -1,9 +1,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
-using PostgresBackupTool.ConsoleApp.Hosting;
+using DatabaseBackupTool.ConsoleApp.Hosting;
 
-namespace PostgresBackupTool.ConsoleApp.Extensions;
+namespace DatabaseBackupTool.ConsoleApp.Extensions;
 
 /// <summary>
 /// Extension methods for adding the <see cref="SlimHostLifetime"/> to the <see cref="IServiceCollection"/>.

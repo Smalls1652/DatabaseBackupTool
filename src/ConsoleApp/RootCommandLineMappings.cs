@@ -1,4 +1,4 @@
-namespace PostgresBackupTool.ConsoleApp;
+namespace DatabaseBackupTool.ConsoleApp;
 
 /// <summary>
 /// Constants for the root command line mappings.

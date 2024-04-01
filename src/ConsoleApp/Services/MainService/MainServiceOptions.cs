@@ -1,6 +1,6 @@
-using PostgresBackupTool.ConsoleApp.Models;
+using DatabaseBackupTool.ConsoleApp.Models;
 
-namespace PostgresBackupTool.ConsoleApp.Services;
+namespace DatabaseBackupTool.ConsoleApp.Services;
 
 /// <summary>
 /// Configuration options for <see cref="MainService"/>. 

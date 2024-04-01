@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<!-- Core properties -->
 	<PropertyGroup>
-		<RootNamespace>PostgresBackupTool.ConsoleApp</RootNamespace>
-		<AssemblyName>pgbt</AssemblyName>
+		<RootNamespace>DatabaseBackupTool.ConsoleApp</RootNamespace>
+		<AssemblyName>dbbt</AssemblyName>
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -17,14 +17,14 @@
 	</PropertyGroup>
 	<!-- Package properties -->
 	<PropertyGroup>
-		<PackageId>PostgresBackupTool.ConsoleApp</PackageId>
+		<PackageId>DatabaseBackupTool.ConsoleApp</PackageId>
 		<Description>
-			Console app for backing up Postgres databases.
+			Console app for backing up databases.
 		</Description>
 		<Authors>Timothy Small</Authors>
 		<Company>Smalls.Online</Company>
 		<Copyright>© 2024 Smalls.Online</Copyright>
-		<RepositoryUrl>https://github.com/Smalls1652/PostgresBackupTool</RepositoryUrl>
+		<RepositoryUrl>https://github.com/Smalls1652/DatabaseBackupTool</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 	<!-- Dependencies -->

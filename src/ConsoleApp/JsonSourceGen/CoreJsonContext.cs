@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
-using PostgresBackupTool.ConsoleApp.Models;
+using DatabaseBackupTool.ConsoleApp.Models;
 
-namespace PostgresBackupTool.ConsoleApp;
+namespace DatabaseBackupTool.ConsoleApp;
 
 [JsonSourceGenerationOptions(
     GenerationMode = JsonSourceGenerationMode.Default,

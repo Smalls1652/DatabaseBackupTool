@@ -1,7 +1,7 @@
-﻿{
+{
   "debug.internalConsoleOptions": "neverOpen",
   "git.detectSubmodules": false,
-  "dotnet.defaultSolution": "PostgresBackupTool.sln",
+  "dotnet.defaultSolution": "DatabaseBackupTool.sln",
   "dotnet.server.useOmnisharp": true,
   "dotnet.server.path": "latest",
   "task.quickOpen.history": 0,

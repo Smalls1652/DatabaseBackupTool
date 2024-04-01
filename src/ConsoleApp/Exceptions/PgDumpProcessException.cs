@@ -1,4 +1,4 @@
-namespace PostgresBackupTool.ConsoleApp.Exceptions;
+namespace DatabaseBackupTool.ConsoleApp.Exceptions;
 
 /// <summary>
 /// Exception thrown when an error occurs while running the 'pg_dump' process.

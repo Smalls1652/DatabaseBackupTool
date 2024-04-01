@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using PostgresBackupTool.ConsoleApp;
-using PostgresBackupTool.ConsoleApp.Extensions;
-using PostgresBackupTool.ConsoleApp.Models;
-using PostgresBackupTool.ConsoleApp.Services;
+using DatabaseBackupTool.ConsoleApp;
+using DatabaseBackupTool.ConsoleApp.Extensions;
+using DatabaseBackupTool.ConsoleApp.Models;
+using DatabaseBackupTool.ConsoleApp.Services;
 
 var builder = Host.CreateApplicationBuilder(args);
 

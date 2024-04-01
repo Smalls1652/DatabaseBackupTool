@@ -1,4 +1,4 @@
-namespace PostgresBackupTool.ConsoleApp.Models;
+namespace DatabaseBackupTool.ConsoleApp.Models;
 
 /// <summary>
 /// Configuration for Azure Blob Storage.

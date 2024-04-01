@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace PostgresBackupTool.ConsoleApp.Hosting;
+namespace DatabaseBackupTool.ConsoleApp.Hosting;
 
 /// <summary>
 /// A custom host lifetime implementation that keeps lifecycle logging to a minimum.

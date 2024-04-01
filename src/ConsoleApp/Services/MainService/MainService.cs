@@ -4,11 +4,11 @@ using System.IO.Compression;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using PostgresBackupTool.ConsoleApp.BackupProviders;
-using PostgresBackupTool.ConsoleApp.Exceptions;
-using PostgresBackupTool.ConsoleApp.Models;
+using DatabaseBackupTool.ConsoleApp.BackupProviders;
+using DatabaseBackupTool.ConsoleApp.Exceptions;
+using DatabaseBackupTool.ConsoleApp.Models;
 
-namespace PostgresBackupTool.ConsoleApp.Services;
+namespace DatabaseBackupTool.ConsoleApp.Services;
 
 /// <summary>
 /// The main hosted service.

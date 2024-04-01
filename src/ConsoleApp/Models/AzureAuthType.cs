@@ -1,4 +1,4 @@
-namespace PostgresBackupTool.ConsoleApp.Models;
+namespace DatabaseBackupTool.ConsoleApp.Models;
 
 /// <summary>
 /// The type of authentication to use when connecting to Azure.

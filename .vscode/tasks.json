@@ -238,11 +238,11 @@
       "id": "projectItem",
       "description": "Select a project.",
       "type": "pickString",
-      "default": "PostgresBackupTool.sln",
+      "default": "DatabaseBackupTool.sln",
       "options": [
         {
           "label": "Entire solution",
-          "value": "PostgresBackupTool.sln"
+          "value": "DatabaseBackupTool.sln"
         },
         {
           "label": "ConsoleApp",

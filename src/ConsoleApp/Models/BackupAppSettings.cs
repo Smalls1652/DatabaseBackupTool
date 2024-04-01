@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace PostgresBackupTool.ConsoleApp.Models;
+namespace DatabaseBackupTool.ConsoleApp.Models;
 
 /// <summary>
 /// Configuration for the backup.

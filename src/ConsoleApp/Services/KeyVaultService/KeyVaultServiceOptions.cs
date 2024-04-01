@@ -1,4 +1,4 @@
-namespace PostgresBackupTool.ConsoleApp.Services;
+namespace DatabaseBackupTool.ConsoleApp.Services;
 
 public sealed class KeyVaultServiceOptions
 {

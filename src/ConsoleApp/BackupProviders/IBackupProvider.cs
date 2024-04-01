@@ -1,4 +1,4 @@
-namespace PostgresBackupTool.ConsoleApp.BackupProviders;
+namespace DatabaseBackupTool.ConsoleApp.BackupProviders;
 
 /// <summary>
 /// Interface for backup providers.

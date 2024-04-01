@@ -3,7 +3,7 @@ using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 using Microsoft.Extensions.Options;
 
-namespace PostgresBackupTool.ConsoleApp.Services;
+namespace DatabaseBackupTool.ConsoleApp.Services;
 
 public sealed class KeyVaultService : IKeyVaultService, IDisposable
 {

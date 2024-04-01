@@ -1,7 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
-using PostgresBackupTool.ConsoleApp.Services;
+using DatabaseBackupTool.ConsoleApp.Services;
 
-namespace PostgresBackupTool.ConsoleApp.Extensions;
+namespace DatabaseBackupTool.ConsoleApp.Extensions;
 
 /// <summary>
 /// Extension methods for adding <see cref="MainService"/> to the service collection.
