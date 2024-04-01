@@ -70,7 +70,7 @@ public sealed class PostgresDatabaseProvider : IDatabaseProvider
         {
             string pgdumpProcessError = await pgdumpProcess.StandardError.ReadToEndAsync(cancellationToken);
 
-            throw new PgDumpProcessException(pgdumpProcessError);
+            throw new DumpProcessException(pgdumpProcessError);
         }
     }
 

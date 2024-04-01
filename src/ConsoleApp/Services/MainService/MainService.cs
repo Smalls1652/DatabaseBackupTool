@@ -64,9 +64,9 @@ public sealed class MainService : IHostedService, IDisposable
             {
                 await _databaseProvider.DumpDatabaseAsync(outputPathFull, cancellationToken);
             }
-            catch (PgDumpProcessException ex)
+            catch (DumpProcessException ex)
             {
-                _logger.LogError(ex, "An error occurred while running the 'pg_dump' process.");
+                _logger.LogError(ex, "An error occurred while dumping the database.");
 
                 return 1;
             }
