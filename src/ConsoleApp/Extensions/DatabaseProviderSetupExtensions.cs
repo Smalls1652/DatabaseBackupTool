@@ -9,7 +9,7 @@ namespace DatabaseBackupTool.ConsoleApp.Extensions;
 internal static class DatabaseProviderSetupExtensions
 {
     /// <summary>
-    /// Adds the <see cref="PostgresDatabaseProvider"/> as the database provider to the service collection.
+    /// Adds <see cref="PostgresDatabaseProvider"/> as the database provider to the service collection.
     /// </summary>
     /// <param name="services">The service collection.</param>
     /// <param name="options">The options for the Postgres database provider.</param>
@@ -19,6 +19,21 @@ internal static class DatabaseProviderSetupExtensions
         services.Configure(options);
         
         services.AddTransient<IDatabaseProvider, PostgresDatabaseProvider>();
+
+        return services;
+    }
+
+    /// <summary>
+    /// Adds <see cref="MySqlDatabaseProvider"/> as the database provider to the service collection.
+    /// </summary>
+    /// <param name="services">The service collection.</param>
+    /// <param name="options">The options for the MySQL database provider.</param>
+    /// <returns>The <see cref="IServiceCollection"/> so that additional calls can be chained.</returns>
+    public static IServiceCollection AddMySqlDatabaseProvider(this IServiceCollection services, Action<MySqlDatabaseProviderOptions> options)
+    {
+        services.Configure(options);
+        
+        services.AddTransient<IDatabaseProvider, MySqlDatabaseProvider>();
 
         return services;
     }
