@@ -8,31 +8,6 @@ namespace DatabaseBackupTool.ConsoleApp.Services;
 public sealed class MainServiceOptions
 {
     /// <summary>
-    /// The host of the PostgreSQL server.
-    /// </summary>
-    public string Host { get; set; } = null!;
-
-    /// <summary>
-    /// The port of the PostgreSQL server.
-    /// </summary>
-    public int Port { get; set; } = 5432;
-
-    /// <summary>
-    /// The username to use when connecting to the PostgreSQL server.
-    /// </summary>
-    public string Username { get; set; } = null!;
-
-    /// <summary>
-    /// The password to use when connecting to the PostgreSQL server.
-    /// </summary>
-    public string Password { get; set; } = null!;
-
-    /// <summary>
-    /// The name of the database to backup.
-    /// </summary>
-    public string Database { get; set; } = null!;
-
-    /// <summary>
     /// The path to the directory where the backup files will be stored.
     /// </summary>
     public string OutputPath { get; set; } = null!;
