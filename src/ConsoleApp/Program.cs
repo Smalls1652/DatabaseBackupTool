@@ -68,18 +68,46 @@ catch (MissingConfigurationValueException ex)
 
     return 1;
 }
-
-if (databaseType == DatabaseType.Postgres)
+catch (Exception ex)
 {
-    builder.Services
+    appLogger.LogError(
+        exception: ex,
+        "An error occurred while parsing the database type '{DatabaseType}'.",
+        databaseTypeSettingValue
+    );
+
+    return 1;
+}
+
+switch (databaseType)
+{
+    case DatabaseType.Postgres:
+        builder.Services
         .AddPostgresDatabaseProvider(options =>
-        {
-            options.Host = builder.Configuration.GetValue<string>("DATABASE_HOST") ?? throw new MissingConfigurationValueException("DATABASE_HOST", "--host");
-            options.Port = builder.Configuration.GetValue<int>("DATABASE_PORT") == 0 ? 5432 : builder.Configuration.GetValue<int>("DATABASE_PORT");
-            options.Username = builder.Configuration.GetValue<string>("DATABASE_USERNAME") ?? throw new MissingConfigurationValueException("DATABASE_USERNAME", "--username");
-            options.Password = builder.Configuration.GetValue<string>("DATABASE_PASSWORD") ?? throw new MissingConfigurationValueException("DATABASE_PASSWORD", "--password");
-            options.Database = builder.Configuration.GetValue<string>("DATABASE_NAME") ?? throw new MissingConfigurationValueException("DATABASE_NAME", "--database");
-        });
+            {
+                options.Host = builder.Configuration.GetValue<string>("DATABASE_HOST") ?? throw new MissingConfigurationValueException("DATABASE_HOST", "--host");
+                options.Port = builder.Configuration.GetValue<int>("DATABASE_PORT") == 0 ? 5432 : builder.Configuration.GetValue<int>("DATABASE_PORT");
+                options.Username = builder.Configuration.GetValue<string>("DATABASE_USERNAME") ?? throw new MissingConfigurationValueException("DATABASE_USERNAME", "--username");
+                options.Password = builder.Configuration.GetValue<string>("DATABASE_PASSWORD") ?? throw new MissingConfigurationValueException("DATABASE_PASSWORD", "--password");
+                options.Database = builder.Configuration.GetValue<string>("DATABASE_NAME") ?? throw new MissingConfigurationValueException("DATABASE_NAME", "--database");
+            });
+        break;
+
+    case DatabaseType.MySQL:
+        builder.Services
+            .AddMySqlDatabaseProvider(options =>
+            {
+                options.Host = builder.Configuration.GetValue<string>("DATABASE_HOST") ?? throw new MissingConfigurationValueException("DATABASE_HOST", "--host");
+                options.Port = builder.Configuration.GetValue<int>("DATABASE_PORT") == 0 ? 3306 : builder.Configuration.GetValue<int>("DATABASE_PORT");
+                options.Username = builder.Configuration.GetValue<string>("DATABASE_USERNAME") ?? throw new MissingConfigurationValueException("DATABASE_USERNAME", "--username");
+                options.Password = builder.Configuration.GetValue<string>("DATABASE_PASSWORD") ?? throw new MissingConfigurationValueException("DATABASE_PASSWORD", "--password");
+                options.Database = builder.Configuration.GetValue<string>("DATABASE_NAME") ?? throw new MissingConfigurationValueException("DATABASE_NAME", "--database");
+            });
+        break;
+
+    default:
+        appLogger.LogError("Invalid database type '{DatabaseType}'.", databaseTypeSettingValue);
+        return 1;
 }
 
 builder.Services
